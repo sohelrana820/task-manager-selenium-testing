@@ -1,6 +1,6 @@
 var color = require("colors");
-var domainName = 'http://localhost/task-manager';
-var logoutUrl = 'http://localhost/task-manager/users/logout';
+var domainName = 'http://task-manager.sohelrana.me';
+var logoutUrl = 'http://task-manager.sohelrana.me/users/logout';
 var email = 'admin@example.com';
 var password = '123456';
 

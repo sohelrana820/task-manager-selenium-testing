@@ -1,7 +1,7 @@
 var color = require("colors");
-var domainName = 'http://localhost/task-manager';
-var signupUrl = 'http://localhost/task-manager/users/signup';
-var logoutUrl = 'http://localhost/task-manager/users/logout';
+var domainName = 'http://task-manager.sohelrana.me';
+var signupUrl = 'http://task-manager.sohelrana.me/users/signup';
+var logoutUrl = 'http://task-manager.sohelrana.me/users/logout';
 var email = 'admin@example.com';
 var password = '123456';
 
@@ -89,7 +89,7 @@ module.exports = {
         driver.wait(until.titleContains('Create Account - ThemeVessel Task Manager'), 10000).then(function (p1) {
             driver.findElement(By.name('profile[first_name]')).sendKeys('Test');
             driver.findElement(By.name('profile[last_name]')).sendKeys('Demo');
-            driver.findElement(By.name('username')).sendKeys('admin5@example.com');
+            driver.findElement(By.name('username')).sendKeys('admin9@example.com');
             driver.findElement(By.name('password')).sendKeys('111111');
             driver.findElement(By.name('cPassword')).sendKeys('111111');
             driver.findElement(By.className('btn btn-primary login-button')).click();
