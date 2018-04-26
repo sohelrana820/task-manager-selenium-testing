@@ -31,6 +31,9 @@ chromeDriver.manage().logs().get(webdriver.logging.Type.BROWSER)
 var configParams = {driver: chromeDriver, By: By, until: until};
 
 var login = require("./tests/login");
+var signup = require("./tests/signup");
+signup.failedSignup(configParams);
+signup.successSignup(configParams);
 login.testRedirectToLogin(configParams);
 login.testLoginPageLinks(configParams);
 login.testLoginFailed(configParams);
