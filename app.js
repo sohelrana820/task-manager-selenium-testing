@@ -32,8 +32,12 @@ var configParams = {driver: chromeDriver, By: By, until: until};
 
 var login = require("./tests/login");
 var signup = require("./tests/signup");
+var forgotPassword = require("./tests/forgot-password");
+login.testRedirectToLogin(configParams);
 signup.failedSignup(configParams);
 signup.successSignup(configParams);
+forgotPassword.wrongAttempt(configParams);
+forgotPassword.successAttempt(configParams);
 login.testRedirectToLogin(configParams);
 login.testLoginPageLinks(configParams);
 login.testLoginFailed(configParams);

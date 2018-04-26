@@ -28,11 +28,11 @@ module.exports = {
                 console.log("\t ->Password must be required!".green);
                 console.log("\t ->Confirm password must be required!".green);
                 console.log("\n");
-                driver.get(signupUrl);
             });
         });
 
         // Invalid email checking
+        driver.get(signupUrl);
         driver.wait(until.titleContains('Create Account - ThemeVessel Task Manager'), 10000).then(function (p1) {
             driver.findElement(By.name('profile[first_name]')).sendKeys('Test');
             driver.findElement(By.name('profile[last_name]')).sendKeys('Demo');
@@ -44,11 +44,11 @@ module.exports = {
                 console.log("*Invalid email address".blue);
                 console.log("\t ->Please provide valid email address!".green);
                 console.log("\n");
-                driver.get(signupUrl);
             });
         });
 
         // Existing email testing
+        driver.get(signupUrl);
         driver.wait(until.titleContains('Create Account - ThemeVessel Task Manager'), 10000).then(function (p1) {
             driver.findElement(By.name('profile[first_name]')).sendKeys('Test');
             driver.findElement(By.name('profile[last_name]')).sendKeys('Demo');
@@ -60,11 +60,11 @@ module.exports = {
                 console.log("*Exist email address".blue);
                 console.log("\t ->This email address is already registered!".green);
                 console.log("\n");
-                driver.get(signupUrl);
             });
         });
 
         // Password and confirm password not match
+        driver.get(signupUrl);
         driver.wait(until.titleContains('Create Account - ThemeVessel Task Manager'), 10000).then(function (p1) {
             driver.findElement(By.name('profile[first_name]')).sendKeys('Test');
             driver.findElement(By.name('profile[last_name]')).sendKeys('Demo');
@@ -76,6 +76,7 @@ module.exports = {
                 console.log("*Password not matched".blue);
                 console.log("\t ->password and confirm password not matched!".green);
                 console.log("================= Failed Signup [ENDED] ===============".grey);
+                console.log("\n");
             });
         });
     },
@@ -88,7 +89,7 @@ module.exports = {
         driver.wait(until.titleContains('Create Account - ThemeVessel Task Manager'), 10000).then(function (p1) {
             driver.findElement(By.name('profile[first_name]')).sendKeys('Test');
             driver.findElement(By.name('profile[last_name]')).sendKeys('Demo');
-            driver.findElement(By.name('username')).sendKeys('admin3@example.com');
+            driver.findElement(By.name('username')).sendKeys('admin5@example.com');
             driver.findElement(By.name('password')).sendKeys('111111');
             driver.findElement(By.name('cPassword')).sendKeys('111111');
             driver.findElement(By.className('btn btn-primary login-button')).click();
@@ -97,6 +98,7 @@ module.exports = {
                 console.log("*Signup complete".blue);
                 console.log("\t ->Signup has been completed successfully!".green);
                 console.log("================= Success Signup [ENDED] ===============".grey);
+                console.log("\n");
             });
         });
     },

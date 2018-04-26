@@ -10,9 +10,9 @@ module.exports = {
         var By = config.By;
         var until = config.until;
 
-        console.log("================= Unauthorized User Redirection [STARTED] =============".grey);
         driver.get(domainName);
         driver.wait(until.titleContains('Signin - ThemeVessel Task Manager'), 10000).then(function (p1) {
+            console.log("================= Unauthorized User Redirection [STARTED] =============".grey);
             console.log("*Checking redirection".blue);
             console.log("\t -> Successfully redirect unauthorized users to login page".green);
             console.log("================= Unauthorized User Redirection [ENDED] ===============".grey);
